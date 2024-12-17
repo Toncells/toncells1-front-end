@@ -14,5 +14,7 @@ COPY --from=build /app/build .
 # Adjust the path in index.html to use relative links
 RUN sed -i 's|/new-landing/static|./static|g' index.html
 
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
