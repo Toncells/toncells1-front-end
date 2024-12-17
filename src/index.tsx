@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
 		z-index: 9999999;
 	}
 `;
-
+console.log('hello world!')
 ReactDOM.render(
 	<React.StrictMode>
 		<Router>
